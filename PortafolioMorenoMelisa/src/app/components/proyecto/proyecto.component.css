@@ -1,0 +1,29 @@
+.proyecto{
+    background:#581845;
+    color: #fff;
+    width: auto;
+}
+
+.row{
+    padding: 20px;
+}
+
+.titulo{
+    text-shadow: -4px 3px 0 #900C3F, -8px 6px 0 #0a0e27;
+    text-align: center;
+    color: #fff;
+}
+
+span{
+    font-style: italic;
+}
+
+.parte1, .parte2{
+    text-align: justify;
+}
+
+.imgProyecto{
+    width: auto;
+    height: auto;
+    box-shadow: 10px 10px 10px #000;
+}
