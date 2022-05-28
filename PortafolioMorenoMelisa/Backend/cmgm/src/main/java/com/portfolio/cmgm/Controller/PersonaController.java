@@ -14,12 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- *
- * @author Melisa
- */
 @RestController
-@CrossOrigin(origins = "http://localhosto:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
@@ -40,7 +36,7 @@ public class PersonaController {
         return "La persona fue eliminada correctamente";
     }
     
-    // URL:PUERTO/personas/editar/4/nombre & apellido & img
+    //URL:PUERTO/personas/editar/4/nombre&apellido&img
     @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
@@ -57,7 +53,8 @@ public class PersonaController {
     }
     
     @GetMapping("/personas/traer/perfil")
-    public Persona findPersona(){
+    public Persona findPersona() {
         return ipersonaService.findPersona((long)1);
     }
+        
 }

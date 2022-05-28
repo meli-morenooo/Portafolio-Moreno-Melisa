@@ -3,10 +3,6 @@ package com.portfolio.cmgm.Interface;
 import com.portfolio.cmgm.Entity.Persona;
 import java.util.List;
 
-/**
- *
- * @author Melisa
- */
 public interface IPersonaService {
     // Traer una lista de personas
     public List<Persona> getPersona();
@@ -14,9 +10,9 @@ public interface IPersonaService {
     // Guardar un objeto de tipo persona
     public void savePersona(Persona persona);
     
-    // Eliminar un objeto. Lo buscamos por ID
+    // Eliminar un objeto pero lo buscamos por Id
     public void deletePersona(Long id);
     
-    // Buscar una persona por ID
+    //Buscar una persona por Id
     public Persona findPersona(Long id);
 }
