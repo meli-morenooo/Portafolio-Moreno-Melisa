@@ -12,7 +12,8 @@
             <a href="https://www.instagram.com/meli.morenoo/" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram" id="instagram"></a>
             <a href="https://github.com/meli-morenooo" target="_blank"><img src="../../../assets/github.png" alt="GitHub" id="github"></a>
             <a href="https://www.facebook.com/melisa.moreno.102/" target="_blank"><img src="../../../assets/facebook.png" alt="Facebook" id="facebook"></a>
-            <button type="button" class="btn btn-outline-light" (click)="login()">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
         </div>
     </div>
 </div>
