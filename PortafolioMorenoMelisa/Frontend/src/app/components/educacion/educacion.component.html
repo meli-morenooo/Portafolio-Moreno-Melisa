@@ -1,7 +1,34 @@
 <div class="row">
     <h1>Educación</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar Educacion
+        </button>
+    </div>
+
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="col-lg-11">
         <h2>Formación Profesional</h2>
         <ul>
             <li><h4>Técnico Superior en Desarrollo Web y Aplicaciones Digitales</h4></li>
@@ -52,5 +79,5 @@
             <li><h4>Introducción en Informática, Campus Virtual - Universidad Nacional de Córdoba</h4></li>
             <h5>Abril 2020</h5>
         </ul>
-    </div>
+    </div> -->
 </div>
